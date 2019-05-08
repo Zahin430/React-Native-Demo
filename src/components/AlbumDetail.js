@@ -1,14 +1,18 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Text } from 'react-native';
+import Card from './Card';
+import CardSection from './CardSection';
 
 const AlbumDetail = (props) => {
     // PASSING PROPS
     // TO COMMUNICATE WITH THE PARENT AlbumList
     // TAKING THE PROP PASSED OVER THERE AKA ALBUM
     return (
-        <View>
-            <Text>{props.album.title}</Text> 
-        </View>
+        <Card>
+            <CardSection>
+                <Text>{props.album.title}</Text> 
+            </CardSection>
+        </Card>
     );
 };
 
