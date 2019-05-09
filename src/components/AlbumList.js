@@ -9,6 +9,7 @@ import AlbumDetail from './AlbumDetail';
 // Unique advantage for lifecycle components to use lifecycle methods
 class AlbumList extends Component {
     // AlbumList GETS INITIAL STATE OF { albums: [] }
+    // State to record user interaction
     state = { albums: [] };
 
     // HTTP REQUEST RETURNS JSON DATA
@@ -18,6 +19,8 @@ class AlbumList extends Component {
         .then(response => this.setState({ albums: response.data }));
     }
 
+    // MAPPING OVER LIST OF ITEMS
+    // PROP IS album SENT OVER FOR COMMUNICATION
     renderAlbums() {
         // PASSING PROPS TO COMMUNICATE WITH CHILD
         return this.state.albums.map(
